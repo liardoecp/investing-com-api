@@ -1,4 +1,13 @@
 declare module "investing-com-api" {
+  interface InvestmentData {
+    date: number;
+    value: number;
+    price_open: number;
+    price_high: number;
+    price_low: number;
+    price_close: number;
+  }
+
   export function investing(
     input: string,
     period?: 'P1D' | 'P1W' | 'P1M' | 'P3M' | 'P6M' | 'P1Y' | 'P5Y' | 'MAX',
@@ -18,12 +27,5 @@ declare module "investing-com-api" {
     resolution: '5' | '60' | 'D' | 'W' | 'M',
     from: Date,
     to: Date
-  ): Promise<{
-    date: number,
-    value: number,
-    price_open: number,
-    price_high: number,
-    price_low: number,
-    price_close: number,
-  }[]>;
+  ): Promise<InvestmentData[]>;
 }

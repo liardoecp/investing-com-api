@@ -15,5 +15,5 @@ function mapResponse(array = []) {
 }
 
 module.exports = {
-  mapResponse
+  mapResponse,
 };

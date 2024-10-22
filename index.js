@@ -1,5 +1,5 @@
 const { mapResponse } = require('./functions');
-const getHistoricalData = require('./src/getHistoricalData')
+const getHistoricalData = require('./src/getHistoricalData');
 
 const validPeriod = ['P1D', 'P1W', 'P1M', 'P3M', 'P6M', 'P1Y', 'P5Y', 'MAX'];
 const validInterval = ['PT1M', 'PT5M', 'PT15M', 'PT30M', 'PT1H', 'PT5H', 'P1D', 'P1W', 'P1M'];
@@ -90,5 +90,5 @@ async function investing(pairId, period = 'P1M', interval = 'P1D', pointscount =
 
 module.exports = {
   investing,
-  getHistoricalData
-}
+  getHistoricalData,
+};

@@ -101,7 +101,6 @@ describe('Tests for getHistoricalData()', () => {
     const expected = [
       {
         date: 1729123200000,
-        value: 1.08309996128082008937099089962430298328399658203125,
         price_open: 1.086099982261659935289799250313080847263336181640625,
         price_high: 1.0872999429702800977537435755948536098003387451171875,
         price_low: 1.0809999704360999661645337255322374403476715087890625,
@@ -110,7 +109,6 @@ describe('Tests for getHistoricalData()', () => {
       },
       {
         date: 1729209600000,
-        value: 1.0865999460220299166479662744677625596523284912109375,
         price_open: 1.08309996128082008937099089962430298328399658203125,
         price_high: 1.086899995803829899188031049561686813831329345703125,
         price_low: 1.0822999477386499034281541753443889319896697998046875,
@@ -159,7 +157,7 @@ describe('Tests for getHistoricalData()', () => {
         });
 
     const data = await getHistoricalData({
-      input: 'currencies/eur-usd',
+      input: '1',
       resolution: 'D',
       from: new Date(1729123200000),
       to: new Date(1729209600000),
@@ -168,7 +166,6 @@ describe('Tests for getHistoricalData()', () => {
     const expected = [
       {
         date: 1729123200000,
-        value: 1.08309996128082008937099089962430298328399658203125,
         price_open: 1.086099982261659935289799250313080847263336181640625,
         price_high: 1.0872999429702800977537435755948536098003387451171875,
         price_low: 1.0809999704360999661645337255322374403476715087890625,
@@ -217,7 +214,7 @@ describe('Tests for getHistoricalData()', () => {
         });
 
     const data = await getHistoricalData({
-      input: 'currencies/eur-usd',
+      input: '1',
       from: new Date(1729123200000),
       to: new Date(1729209600000),
     });
@@ -225,7 +222,6 @@ describe('Tests for getHistoricalData()', () => {
     const expected = [
       {
         date: 1729123200000,
-        value: 1.08309996128082008937099089962430298328399658203125,
         price_open: 1.086099982261659935289799250313080847263336181640625,
         price_high: 1.0872999429702800977537435755948536098003387451171875,
         price_low: 1.0809999704360999661645337255322374403476715087890625,
